@@ -1,78 +1,61 @@
 import 'package:flutter/material.dart';
 
 class RewardsBlock extends StatelessWidget {
-  const RewardsBlock({super.key});
+  const RewardsBlock({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       children: [
-        Text(
+        const Text(
           'Rewards',
           style: TextStyle(
             fontSize: 20.0,
-            color: Colors.black, // White text color
+            color: Colors.white, // White text color
             fontFamily: 'SourceSansPro', // Source Sans Pro font
           ),
         ),
-        Row(
-          children: [
-            Expanded(
-              child: AspectRatio(
-                aspectRatio: 1.0, // 1.0 means a 1:1 aspect ratio (square)
-                child: Card(
-                  child: Center(
-                    child: Text(
-                      'Reward 1: \nCompleted Goal 1!',
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            Expanded(
-              child: AspectRatio(
-                aspectRatio: 1.0, // 1.0 means a 1:1 aspect ratio (square)
-                child: Card(
-                  child: Center(
-                    child: Text(
-                      'Reward 2: \nCompleted Goal 2!',
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            Expanded(
-              child: AspectRatio(
-                aspectRatio: 1.0, // 1.0 means a 1:1 aspect ratio (square)
-                child: Card(
-                  child: Center(
-                    child: Text(
-                      'Reward 3: \nCompleted Goal 3!',
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            Expanded(
-              child: AspectRatio(
-                aspectRatio: 1.0, // 1.0 means a 1:1 aspect ratio (square)
-                child: Card(
-                  child: Center(
-                    child: Text(
-                      'Reward 4: \nCompleted Goal 4!',
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                ),
-              ),
-            ),
+        GridView.count(
+          shrinkWrap: true,
+          crossAxisCount: 4,
+          crossAxisSpacing: 16,
+          mainAxisSpacing: 16,
+          children: const [
+            RewardCard(text: 'Shopaholic!'),
+            RewardCard(text: 'Sportsman'),
+            RewardCard(text: 'Charitable Heart'),
+            RewardCard(text: 'Techno-Geek')
           ],
         ),
-        SizedBox(height: 16.0),
+        const SizedBox(height: 5.0),
       ],
+    );
+  }
+}
+
+class RewardCard extends StatelessWidget {
+  final String text;
+
+  const RewardCard({required this.text, Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16.0),
+      ),
+      color: Colors.grey[800],
+      child: Center(
+        child: Text(
+          text,
+          textAlign: TextAlign.center,
+          style: const TextStyle(
+            color: Colors.white,
+            fontSize: 16.0,
+            fontFamily: 'SourceSansPro', // Source Sans Pro font
+          ),
+        ),
+      ),
     );
   }
 }

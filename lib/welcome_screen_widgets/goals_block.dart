@@ -1,52 +1,93 @@
 import 'package:flutter/material.dart';
+import 'package:percent_indicator/percent_indicator.dart';
 
 class GoalsBlock extends StatelessWidget {
-  const GoalsBlock({super.key});
+  const GoalsBlock({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       children: [
-        Text('Goals', style: TextStyle(fontSize: 20.0)),
+        const Text(
+          'Goals',
+          style: TextStyle(
+            fontSize: 20.0,
+            color: Colors.white,
+            fontFamily: 'SourceSansPro',
+          ),
+        ),
         Row(
           children: [
             Expanded(
-              child: Card(
-                child: Stack(
-                  // Use Stack widget to overlay text on progress bar
-                  alignment: Alignment.center, // Align the text to the center
-                  children: [
-                    LinearProgressIndicator(
-                      // Use LinearProgressIndicator widget for progress bar
-                      value: 0.9, // Replace with actual progress value
-                      color: Color(
-                          0xFF0ABB49), // Change the color of the progress bar
-                      backgroundColor:
-                          Colors.grey, // Change the color of the progress bar
-                      minHeight: 50.0, // Change the height of the progress bar
-                    ),
-                    Text('New iPhone'), // Use Text widget for text
-                  ],
+              child: InkWell(
+                onTap: () {
+                  // Handle the tap on Goal 1
+                },
+                borderRadius: BorderRadius.circular(16),
+                child: Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  color: Colors.grey[300],
+                  child: Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      LinearPercentIndicator(
+                        barRadius: const Radius.circular(16),
+                        percent: 0.9,
+                        progressColor: const Color(0xFF0ABB49),
+                        backgroundColor: Colors.grey[300],
+                        lineHeight: 50.0,
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text(
+                          'New iPhone',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
-            SizedBox(width: 16.0),
+            const SizedBox(width: 16.0),
             Expanded(
-              child: Card(
-                child: Stack(
-                  // Use Stack widget to overlay text on progress bar
-                  alignment: Alignment.center, // Align the text to the center
-                  children: [
-                    LinearProgressIndicator(
-                      // Use LinearProgressIndicator widget for progress bar
-                      value: 0.1, // Replace with actual progress value
-                      color: Color(
-                          0xFF0ABB49), // Change the color of the progress bar
-                      backgroundColor: Colors.grey,
-                      minHeight: 50.0, // Change the height of the progress bar
-                    ),
-                    Text('Mortgage'), // Use Text widget for text
-                  ],
+              child: InkWell(
+                onTap: () {
+                  // Handle the tap on Goal 2
+                },
+                borderRadius: BorderRadius.circular(16),
+                child: Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  color: Colors.grey[300],
+                  child: Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      LinearPercentIndicator(
+                        barRadius: const Radius.circular(16),
+                        percent: 0.1,
+                        progressColor: const Color(0xFF0ABB49),
+                        backgroundColor: Colors.grey[300],
+                        lineHeight: 50.0,
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text(
+                          'Mortgage',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

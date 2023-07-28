@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart'; // Import this for setting status bar color
+
 import 'welcome_screen_widgets/main_block.dart';
 import 'welcome_screen_widgets/filler_block.dart';
 import 'welcome_screen_widgets/cashback_block.dart';
@@ -10,13 +12,26 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    // Set the status bar color to match the dark background
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light.copyWith(
+      statusBarColor: Colors.grey[900],
+    ));
+
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title:const Text('Finance App')),
+        backgroundColor: Colors.grey[900], // Dark grey background color
+        appBar: AppBar(
+          backgroundColor: Colors.transparent, // Transparent app bar
+          elevation: 0, // No shadow under the app bar
+          title: const Text(
+            'Bereke Bank Financial Manager',
+            style: TextStyle(fontSize: 35.0, fontFamily: 'SourceSansPro'),
+          ),
+        ),
         body: const SingleChildScrollView(
           padding: EdgeInsets.all(16.0),
           child: Column(
