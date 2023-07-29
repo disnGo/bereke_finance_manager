@@ -1,3 +1,4 @@
+import 'package:bereke_finance_manager/goals_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
@@ -20,9 +21,12 @@ class GoalsBlock extends StatelessWidget {
           children: [
             Expanded(
               child: InkWell(
-                onTap: () {
-                  // Handle the tap on Goal 1
-                },
+              onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) =>  const GoalsScreen()),
+                        );
+                      },
                 borderRadius: BorderRadius.circular(16),
                 child: Card(
                   shape: RoundedRectangleBorder(
@@ -58,8 +62,11 @@ class GoalsBlock extends StatelessWidget {
             Expanded(
               child: InkWell(
                 onTap: () {
-                  // Handle the tap on Goal 2
-                },
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) =>  const GoalsScreen()),
+                        );
+                      },
                 borderRadius: BorderRadius.circular(16),
                 child: Card(
                   shape: RoundedRectangleBorder(

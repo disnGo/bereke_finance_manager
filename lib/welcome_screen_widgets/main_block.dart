@@ -1,5 +1,6 @@
+import 'package:bereke_finance_manager/stats_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:charts_flutter/flutter.dart' as charts;
+// import 'package:charts_flutter/flutter.dart' as charts;
 
 
 class MainBlock extends StatelessWidget {
@@ -12,7 +13,10 @@ class MainBlock extends StatelessWidget {
       height: 200, // Set the desired height
       child: InkWell(
         onTap: () {
-          // Handle the tap on this block
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) =>  const StatsScreen()),
+          );
         },
         child: Card(
           shape: RoundedRectangleBorder(

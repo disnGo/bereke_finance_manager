@@ -1,3 +1,4 @@
+import 'package:bereke_finance_manager/rewards_screen.dart';
 import 'package:flutter/material.dart';
 
 class RewardsBlock extends StatelessWidget {
@@ -46,7 +47,15 @@ class RewardCard extends StatelessWidget {
       ),
       color: Colors.grey[800],
       child: Center(
-        child: Text(
+        child: 
+        InkWell(onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) =>  const RewardsScreen()),
+          );
+        },
+        child:         
+        Text(
           text,
           textAlign: TextAlign.center,
           style: const TextStyle(
@@ -54,8 +63,9 @@ class RewardCard extends StatelessWidget {
             fontSize: 16.0,
             fontFamily: 'SourceSansPro', // Source Sans Pro font
           ),
-        ),
+        ),)
       ),
+      
     );
   }
 }
