@@ -8,14 +8,14 @@ class CashbackBlock extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Text(
-          'Your Cashbacks',
-          style: TextStyle(
-            fontSize: 20.0,
-            color: Colors.white, // Black text color
-            fontFamily: 'SourceSansPro', // Source Sans Pro font
-          ),
-        ),
+        // const Text(
+        //   'Your Cashbacks',
+        //   style: TextStyle(
+        //     fontSize: 20.0,
+        //     color: Colors.white, // Black text color
+        //     fontFamily: 'SourceSansPro', // Source Sans Pro font
+        //   ),
+        // ),
         Column(
           children: [
             Padding(
@@ -33,20 +33,21 @@ class CashbackBlock extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Exercises',
+                          'Спортзал',
                           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
                           textAlign: TextAlign.left,
                         ),
-                        Text('12,000/12,500', style: TextStyle(color: Colors.white)),
+                        Text('12,500₸/12,500₸', style: TextStyle(color: Colors.white)),
+                        Text('Не хотите ли подключить повышенный кэшбек?\n\n    ДА                   НЕТ', style: TextStyle(color: Colors.white)),
                       ],
                     ),
                     CircularPercentIndicator(
                       radius: 45,
                       lineWidth: 15.0,
-                      percent: 0.96,
+                      percent: 1.0,
                       progressColor: const Color(0xFF0ABB49),
                       center: const Text(
-                        '96%',
+                        '100%',
                         style: TextStyle(fontSize: 20.0, color: Colors.white),
                       ),
                     ),
@@ -69,10 +70,10 @@ class CashbackBlock extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Groceries',
+                          'Покупки в супермаркетах',
                           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
                         ),
-                        Text('24,586/30,000', style: TextStyle(color: Colors.white)),
+                        Text('24,586₸/30,000₸', style: TextStyle(color: Colors.white)),
                       ],
                     ),
                     CircularPercentIndicator(

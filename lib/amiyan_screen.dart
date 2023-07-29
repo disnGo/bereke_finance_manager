@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class RewardsScreen extends StatelessWidget {
-  const RewardsScreen({super.key});
+class AmiyanScreen extends StatelessWidget {
+  const AmiyanScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,5 +26,3 @@ class RewardsScreen extends StatelessWidget {
       );
   }
 }
-
-

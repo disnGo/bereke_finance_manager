@@ -9,51 +9,45 @@ class GoalsBlock extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Text(
-          'Goals',
-          style: TextStyle(
-            fontSize: 20.0,
-            color: Colors.white,
-            fontFamily: 'SourceSansPro',
-          ),
-        ),
         Row(
           children: [
             Expanded(
               child: InkWell(
-              onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) =>  const GoalsScreen()),
-                        );
-                      },
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => GoalsScreen()),
+                  );
+                },
                 borderRadius: BorderRadius.circular(16),
                 child: Card(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16),
                   ),
                   color: Colors.grey[300],
-                  child: Stack(
-                    alignment: Alignment.center,
-                    children: [
-                      LinearPercentIndicator(
-                        barRadius: const Radius.circular(16),
-                        percent: 0.9,
-                        progressColor: const Color(0xFF0ABB49),
-                        backgroundColor: Colors.grey[300],
-                        lineHeight: 50.0,
-                      ),
-                      const Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Text(
-                          'New iPhone',
+                  child: Padding(
+                    padding: const EdgeInsets.all(0.0), // Add padding to the Card
+                    child: Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        LinearPercentIndicator(
+                          padding: EdgeInsets.zero, // Removed padding to fill the card
+                          alignment: MainAxisAlignment.center,
+                          lineHeight: 80.0, // Increased the height to fill the card
+                          percent: 0.9,
+                          progressColor: const Color(0xFF0ABB49),
+                          backgroundColor: Colors.transparent, // Changed to transparent
+                          barRadius: const Radius.circular(16), // Rounded corners with barRadius
+                        ),
+                        const Text(
+                          'На новый телефон',
                           style: TextStyle(
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -62,38 +56,40 @@ class GoalsBlock extends StatelessWidget {
             Expanded(
               child: InkWell(
                 onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) =>  const GoalsScreen()),
-                        );
-                      },
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => GoalsScreen()),
+                  );
+                },
                 borderRadius: BorderRadius.circular(16),
                 child: Card(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16),
                   ),
                   color: Colors.grey[300],
-                  child: Stack(
-                    alignment: Alignment.center,
-                    children: [
-                      LinearPercentIndicator(
-                        barRadius: const Radius.circular(16),
-                        percent: 0.1,
-                        progressColor: const Color(0xFF0ABB49),
-                        backgroundColor: Colors.grey[300],
-                        lineHeight: 50.0,
-                      ),
-                      const Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Text(
-                          'Mortgage',
+                  child: Padding(
+                    padding: const EdgeInsets.all(0.0), // Add padding to the Card
+                    child: Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        LinearPercentIndicator(
+                          padding: EdgeInsets.zero, // Removed padding to fill the card
+                          alignment: MainAxisAlignment.center,
+                          lineHeight: 80.0, // Increased the height to fill the card
+                          percent: 0.1,
+                          progressColor: const Color(0xFF0ABB49),
+                          backgroundColor: Colors.transparent, // Changed to transparent
+                          barRadius: const Radius.circular(16), // Rounded corners with barRadius
+                        ),
+                        const Text(
+                          'Дом',
                           style: TextStyle(
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),

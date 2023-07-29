@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 
-class GoalsScreen extends StatelessWidget {
-  const GoalsScreen({super.key});
+import 'goals_screen_widgets/header.dart';
+import 'goals_screen_widgets/progress_bar.dart';
+import 'goals_screen_widgets/income_outcome.dart';
+import 'goals_screen_widgets/chart_adding.dart';
 
+class GoalsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,15 +14,43 @@ class GoalsScreen extends StatelessWidget {
           backgroundColor: Colors.transparent, // Transparent app bar
           elevation: 0, // No shadow under the app bar
           title: const Text(
-            'Bereke Bank Financial Manager',
-            style: TextStyle(fontSize: 35.0, fontFamily: 'SourceSansPro'),
+            'Финансовый помощник Bereke Bank',
+            style: TextStyle(fontSize: 30.0, fontFamily: 'SourceSansPro'),
           ),
         ),
-        body: const SingleChildScrollView(
-          padding: EdgeInsets.all(16.0),
+        body:  SingleChildScrollView(
+          padding: EdgeInsets.all(20.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              HeaderBlock(),
+              SizedBox(height: 16,),
+              Text(
+                'Ваш прогресс',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 25,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(height: 16,),
+              ProgressBarBlock(),
+              SizedBox(height: 16,),
+              InOutComeButtonBlock(),
+              SizedBox(height: 16,),
+              CustomBarChart(),
+              // Text(
+              //     'New Phone',
+              //     style: TextStyle(
+              //         fontSize: 35.0,
+              //         color: Colors.white,
+              //         fontFamily: 'SourceSansPro',
+              //         fontWeight: FontWeight.bold
+              //     )
+              // ),
+              // Card(
+              //
+              // ),
             ],
           ),
         ),

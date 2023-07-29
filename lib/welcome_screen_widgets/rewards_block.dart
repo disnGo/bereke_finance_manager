@@ -8,24 +8,24 @@ class RewardsBlock extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Text(
-          'Rewards',
-          style: TextStyle(
-            fontSize: 20.0,
-            color: Colors.white, // White text color
-            fontFamily: 'SourceSansPro', // Source Sans Pro font
-          ),
-        ),
+        // const Text(
+        //   'Rewards',
+        //   style: TextStyle(
+        //     fontSize: 20.0,
+        //     color: Colors.white, // White text color
+        //     fontFamily: 'SourceSansPro', // Source Sans Pro font
+        //   ),
+        // ),
         GridView.count(
           shrinkWrap: true,
           crossAxisCount: 4,
           crossAxisSpacing: 16,
           mainAxisSpacing: 16,
           children: const [
-            RewardCard(text: 'Shopaholic!'),
-            RewardCard(text: 'Sportsman'),
-            RewardCard(text: 'Charitable Heart'),
-            RewardCard(text: 'Techno-Geek')
+            RewardCard(text: 'Шопоголик!'),
+            RewardCard(text: 'Машина!'),
+            RewardCard(text: 'Благое дело'),
+            RewardCard(text: 'Техно-Гик')
           ],
         ),
         const SizedBox(height: 5.0),
@@ -54,16 +54,19 @@ class RewardCard extends StatelessWidget {
             MaterialPageRoute(builder: (context) =>  const RewardsScreen()),
           );
         },
-        child:         
-        Text(
-          text,
-          textAlign: TextAlign.center,
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 16.0,
-            fontFamily: 'SourceSansPro', // Source Sans Pro font
+        child:
+          Padding(
+              padding: EdgeInsets.all(20),
+            child:
+              text == 'Шопоголик!' ?
+                Icon(Icons.favorite, color: Colors.pink,):
+              text == 'Машина!' ?
+                Icon(Icons.fitness_center, color: Colors.blue,):
+              text == 'Благое дело' ?
+                Icon(Icons.volunteer_activism, color: Colors.orange,):
+            Icon(Icons.qr_code_2, color: Colors.white,)
           ),
-        ),)
+        )
       ),
       
     );

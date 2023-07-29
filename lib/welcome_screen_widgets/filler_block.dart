@@ -13,7 +13,7 @@ class FillerBlock extends StatelessWidget {
       child: const Padding(
         padding: EdgeInsets.all(10.0),
         child: Text(
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+          'Мой друг, твои деньги уже заявляют о своей независимости! Они хотят свою реалити-шоу "Сделки и Потрясения"!',
           style: TextStyle(
             fontSize: 16.0,
             color: Colors.white, // White text color

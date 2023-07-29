@@ -1,5 +1,6 @@
 import 'package:bereke_finance_manager/stats_screen.dart';
 import 'package:flutter/material.dart';
+
 // import 'package:charts_flutter/flutter.dart' as charts;
 
 
@@ -10,7 +11,7 @@ class MainBlock extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: 300, // Set the desired width
-      height: 200, // Set the desired height
+      height: 250, // Set the desired height
       child: InkWell(
         onTap: () {
           Navigator.push(
@@ -40,9 +41,9 @@ class MainBlock extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Balance: \$100,000',
+                      'Баланс: \₸100,000',
                       style: TextStyle(
-                        fontSize: 20.0,
+                        fontSize: 25.0,
                         fontWeight: FontWeight.bold,
                         color: Colors.white, // White text color
                         fontFamily: 'SourceSansPro', // Source Sans Pro font
@@ -50,18 +51,18 @@ class MainBlock extends StatelessWidget {
                     ),
                     SizedBox(height: 16.0), // Increased distance
                     Text(
-                      'Income: \$900,000',
+                      'Доход: \₸900,000',
                       style: TextStyle(
-                        fontSize: 16.0,
+                        fontSize: 15.0,
                         color: Colors.green, // Emerald green text color
                         fontFamily: 'SourceSansPro', // Source Sans Pro font
                       ),
                     ),
                     SizedBox(height: 8.0), // Increased distance
                     Text(
-                      'Expenses: \$800,000',
+                      'Расход: \₸800,000',
                       style: TextStyle(
-                        fontSize: 16.0,
+                        fontSize: 15.0,
                         color: Colors.red, // Red text color
                         fontFamily: 'SourceSansPro', // Source Sans Pro font
                       ),

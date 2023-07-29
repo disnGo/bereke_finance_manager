@@ -79,8 +79,8 @@ class _DetailScreenState extends State<DetailScreen> {
                 ),
                 child: Center(
                   child: Text(
-                    '\$${amountLeft.toStringAsFixed(2)} / \$${widget.typeModel!.maxAmount}',
-                    style: GoogleFonts.aubrey(
+                    '\₸${amountLeft.toStringAsFixed(2)} / \₸${widget.typeModel!.maxAmount}',
+                    style: GoogleFonts.sourceSansPro(
                       fontWeight: FontWeight.w500,
                       color: kSecondaryColor,
                       fontSize: 22.sp,
@@ -117,7 +117,7 @@ class _DetailScreenState extends State<DetailScreen> {
               children: [
                 Text(
                   expense.name!,
-                  style: GoogleFonts.atma(
+                  style: GoogleFonts.sourceSansPro(
                     fontSize: 14.sp,
                     fontWeight: FontWeight.w600,
                     color: kTextColor,
@@ -125,8 +125,8 @@ class _DetailScreenState extends State<DetailScreen> {
                   ),
                 ),
                 Text(
-                  '-\$${expense.cost!.toStringAsFixed(2)}',
-                  style: GoogleFonts.atma(
+                  '-\₸${expense.cost!.toStringAsFixed(2)}',
+                  style: GoogleFonts.sourceSansPro(
                     fontSize: 14.sp,
                     fontWeight: FontWeight.w600,
                     color: kSecondaryColor,
