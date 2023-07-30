@@ -48,12 +48,7 @@ class RewardCard extends StatelessWidget {
       color: Colors.grey[800],
       child: Center(
         child: 
-        InkWell(onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) =>  const RewardsScreen()),
-          );
-        },
+        InkWell(
         child:
           Padding(
               padding: EdgeInsets.all(20),

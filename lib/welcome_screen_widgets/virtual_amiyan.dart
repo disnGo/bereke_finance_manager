@@ -30,12 +30,6 @@ class _VirtualPotBlockState extends State<VirtualPotBlock> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {
-        Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) =>  const AmiyanScreen()),
-          );
-      },
       child: Container(
         width: double.infinity,
         margin: const EdgeInsets.symmetric(vertical: 8.0),

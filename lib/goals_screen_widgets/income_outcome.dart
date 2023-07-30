@@ -49,7 +49,7 @@ class RewardCard extends StatelessWidget {
               child: Column (
                 children: [
                     text ? const Text(
-                      'Доход',
+                      'Пополнение',
                       style: TextStyle(
                         color: Colors.green,
                         fontSize: 20,
@@ -57,7 +57,7 @@ class RewardCard extends StatelessWidget {
                       ),
                     ):
                         const Text(
-                          'Расход',
+                          'Снятие',
                           style: TextStyle(
                               color: Colors.red,
                               fontSize: 20,

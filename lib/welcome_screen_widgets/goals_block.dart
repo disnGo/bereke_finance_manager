@@ -55,12 +55,7 @@ class GoalsBlock extends StatelessWidget {
             const SizedBox(width: 16.0),
             Expanded(
               child: InkWell(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => GoalsScreen()),
-                  );
-                },
+                
                 borderRadius: BorderRadius.circular(16),
                 child: Card(
                   shape: RoundedRectangleBorder(

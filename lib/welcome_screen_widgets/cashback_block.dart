@@ -38,7 +38,7 @@ class CashbackBlock extends StatelessWidget {
                           textAlign: TextAlign.left,
                         ),
                         Text('12,500₸/12,500₸', style: TextStyle(color: Colors.white)),
-                        Text('Не хотите ли подключить повышенный кэшбек?\n\n    ДА                   НЕТ', style: TextStyle(color: Colors.white)),
+                        Text('Не хотите ли подключить \nповышенный кэшбек?\n\n    ДА         НЕТ', style: TextStyle(color: Colors.white)),
                       ],
                     ),
                     CircularPercentIndicator(
